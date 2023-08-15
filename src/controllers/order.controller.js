@@ -2,7 +2,7 @@ const db = require('../database');
 // import type { Request, DataReturnType } from '../typings'
 // import type { OrderModel } from '../typings/order.type'
 
-export const addOrderController = async (req) => {
+exports.addOrderController = async (req) => {
   const errors = []
   const data = {}
 
@@ -53,7 +53,7 @@ export const addOrderController = async (req) => {
   }
 }
 
-export const updateOrderController = async (req) => {
+exports.updateOrderController = async (req) => {
   const errors = []
   const data = {}
   const { userorder } = req.body
@@ -80,7 +80,7 @@ export const updateOrderController = async (req) => {
   }
 }
 
-export const deleteOrderController = async (req) => {
+exports.deleteOrderController = async (req) => {
   const errors= []
   const data = {}
 

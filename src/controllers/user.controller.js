@@ -5,7 +5,7 @@ const { Users } = db
 
 // Auth functions
 // Login Controller Function
-export const loginController = async (req, res, next)=> {
+exports.loginController = async (req, res, next)=> {
   const { email, password } = req.body
   const errors = []
   const data = {}
@@ -43,7 +43,7 @@ export const loginController = async (req, res, next)=> {
 }
 
 // Register Controller Functions
-export const registerController = async (req) => {
+exports.registerController = async (req) => {
   const { email, password, firstname, lastname, phone } = req.body
   const errors = []
   const data= {}
@@ -79,7 +79,7 @@ export const registerController = async (req) => {
 }
 
 // Other functions
-export const userValidateController = async (req ,res, next) => {
+exports.userValidateController = async (req ,res, next) => {
   const errors = []
   const data= {}
 
@@ -106,7 +106,7 @@ export const userValidateController = async (req ,res, next) => {
   }
 }
 
-export const addressController = async (req)=> {
+exports.addressController = async (req)=> {
   const { address } = req.body
   const errors = []
   const data= {}

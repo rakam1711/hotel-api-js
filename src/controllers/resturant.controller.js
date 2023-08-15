@@ -2,7 +2,7 @@ const db = require('../database')
 // import type { DataReturnType, Request } from '../typings'
 
 // Resturant Auth Funtions
-export const loginResturantController = async (req)=> {
+exports.loginResturantController = async (req)=> {
   const { email, password } = req.body
   const errors = []
   const data = {}
@@ -41,7 +41,7 @@ export const loginResturantController = async (req)=> {
   }
 }
 
-export const registerResturantController = async (req)=> {
+exports.registerResturantController = async (req)=> {
   const { name, email, password, description, contacts, image, tags, address } =
     req.body
 
@@ -88,7 +88,7 @@ export const registerResturantController = async (req)=> {
 
 // Other Resturant Functions
 
-export const validateResturant = async (req) => {
+exports.validateResturant = async (req) => {
   const errors = []
   const data = {}
 
@@ -115,7 +115,7 @@ export const validateResturant = async (req) => {
   }
 }
 
-export const getResturantMenuController = async (req) => {
+exports.getResturantMenuController = async (req) => {
   const errors= []
   const data = {}
 
@@ -139,7 +139,7 @@ export const getResturantMenuController = async (req) => {
   }
 }
 
-export const addMenuItemController = async (req) => {
+exports.addMenuItemController = async (req) => {
   const { name, description, thumbnail, price, quantity, category, tags } =
     req.body
 
@@ -174,7 +174,7 @@ export const addMenuItemController = async (req) => {
   }
 }
 
-export const removeMenuItemController = async (req) => {
+exports.removeMenuItemController = async (req) => {
   const errors= []
   const data = {}
 
@@ -195,7 +195,7 @@ export const removeMenuItemController = async (req) => {
   }
 }
 
-export const updateMenuItemController = async (req)=> {
+exports.updateMenuItemController = async (req)=> {
   const { menuitem } = req.body
   const errors = []
   const data = {}

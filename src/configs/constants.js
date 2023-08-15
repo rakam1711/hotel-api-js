@@ -1,1 +1,1 @@
-export const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY || 'test123'
+exports.JWT_SECRET_KEY = process.env.JWT_SECRET_KEY || 'test123'

@@ -7,7 +7,7 @@ const {
   userValidateController
 } = require('../controllers/user.controller');
 
-// const protect from '../middlewares/protect'
+const protect =require('../middlewares/protect');
 
 const userRouter = express.Router()
 
@@ -33,4 +33,4 @@ userRouter.post('/address', protect, async (req, res) => {
   res.json(response).status(200)
 })
 
-export default userRouter
+module.exports = userRouter

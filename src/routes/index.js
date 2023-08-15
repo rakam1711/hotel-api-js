@@ -10,4 +10,4 @@ router.use('/user', userRouter)
 router.use('/resturant', resturantRouter)
 router.use('/order', orderRouter)
 
-modules.exports = router
+module.exports = router
