@@ -1,5 +1,4 @@
 const db =require('../database');
-// import type { DataReturnType, Request } from '../typings'
 
 const { Users } = db
 

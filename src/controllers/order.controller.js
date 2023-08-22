@@ -1,6 +1,5 @@
 const db = require('../database');
-// import type { Request, DataReturnType } from '../typings'
-// import type { OrderModel } from '../typings/order.type'
+
 
 exports.addOrderController = async (req) => {
   const errors = []
