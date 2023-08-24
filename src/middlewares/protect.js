@@ -18,6 +18,7 @@ const protect = async (req, res, next) => {
 
     const token = authorization.split(' ')[1]
     const data = jwt.verify(token, JWT_SECRET_KEY)
+    console.log(data);
 
     if (data.role === 'user') {
       const user = await db.Users.findById(data?.userid)

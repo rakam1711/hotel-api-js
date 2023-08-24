@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon src/app.ts"
+    "dev": "nodemon src/app.js"
   },
   "author": "rakam-singh",
   "license": "ISC",
