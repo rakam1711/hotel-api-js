@@ -13,6 +13,21 @@ const protect = require('../middlewares/protect');
 
 const resturantRouter = Router()
 
+//get routes'
+
+resturantRouter.get('/login',(req,res)=>{
+  res.render('login');
+})
+
+resturantRouter.get('/registerR',(req,res)=>{
+  res.render('registerR');
+})
+
+resturantRouter.get('/page',(req,res)=>{
+  res.render('rp');
+})
+
+
 // Resturant auth routes
 resturantRouter.post('/login', async (req, res) => {
   const response = await loginResturantController(req)

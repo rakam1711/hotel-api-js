@@ -11,6 +11,20 @@ const protect =require('../middlewares/protect');
 
 const userRouter = express.Router()
 
+//get routes
+
+userRouter.get('/login',(req,res)=>{
+  res.render('login');
+})
+
+userRouter.get('/register',(req,res)=>{
+  res.render('register');
+})
+userRouter.get('/page',(req,res)=>{
+  res.render('up');
+})
+
+
 // User auth routes
 userRouter.post('/login', async (req, res) => {
   const response = await loginController(req)
