@@ -5,6 +5,7 @@ exports.loginResturantController = async (req)=> {
   const { email, password } = req.body
   const errors = []
   const data = {}
+  
 
   try {
     const resturant = await db.Resturants.findOne({ email }).select('+password')
@@ -15,6 +16,7 @@ exports.loginResturantController = async (req)=> {
 
     // * Fixed always getting true even with wrong password by adding await
     const isPasswordMatch = await resturant.verifyPassword(password)
+    
 
     if (!isPasswordMatch) {
       throw new Error('Email and Password do not match')
@@ -23,7 +25,7 @@ exports.loginResturantController = async (req)=> {
     if (!token) {
       throw new Error('Unable to login')
     }
-
+    
     data.token = token
   } catch (error) {
     if (typeof error === typeof new Error('')) {

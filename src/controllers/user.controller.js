@@ -43,7 +43,7 @@ exports.loginController = async (req, res, next)=> {
 
 // Register Controller Functions
 exports.registerController = async (req) => {
-  const { email, password, firstname, lastname, phone } = req.body
+  const { email, password, firstname, lastname, phone , address} = req.body
   const errors = []
   const data= {}
 
@@ -58,7 +58,7 @@ exports.registerController = async (req) => {
       throw new Error('Phone number already in use')
     }
 
-    const user = await Users.create({ email, password, firstname, lastname, phone })
+    const user = await Users.create({ email, password, firstname, lastname, phone , address })
 
     const token = user.getSignedToken()
     data.token = token
@@ -115,6 +115,8 @@ exports.addressController = async (req)=> {
     if (!user) {
       throw new Error('User not found')
     }
+
+  data.address = user.address
   } catch (error) {
     if (typeof error === typeof new Error('')) {
       errors.push(error.message)
