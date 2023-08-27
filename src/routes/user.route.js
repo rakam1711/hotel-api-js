@@ -29,6 +29,8 @@ userRouter.get('/page',(req,res)=>{
 userRouter.post('/login', async (req, res) => {
   const response = await loginController(req)
   res.json(response).status(200)
+  
+  
 })
 
 userRouter.post('/register', async (req, res) => {

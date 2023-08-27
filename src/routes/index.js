@@ -10,6 +10,7 @@ router.use('/user', userRouter)
 router.use('/resturant', resturantRouter)
 router.use('/order', orderRouter)
 
+
 router.get("/",function(req,res){
     res.render("home");
 });
