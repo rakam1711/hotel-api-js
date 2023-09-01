@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-// import type { ResturantModel } from '../typings/resturant.type'
+
 const { JWT_SECRET_KEY } = require('../configs/constants');
 
 const resturantSchema = new mongoose.Schema({

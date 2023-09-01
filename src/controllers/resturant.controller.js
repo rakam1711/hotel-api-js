@@ -146,6 +146,7 @@ exports.addMenuItemController = async (req) => {
 
   const errors = []
   const data = {}
+  
 
   try {
     const item = await db.MenuItems.create({
