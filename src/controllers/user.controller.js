@@ -8,6 +8,7 @@ exports.loginController = async (req, res, next)=> {
   const { email, password } = req.body
   const errors = []
   const data = {}
+  console.log(email);
 
   try {
     const user = await Users.findOne({ email }).select('+password')

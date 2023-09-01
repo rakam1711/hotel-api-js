@@ -49,7 +49,7 @@ const resturantSchema = new mongoose.Schema({
 
   tags: {
     type: [String],
-    require: true
+    require: false
   },
 
   address: {
