@@ -1,4 +1,4 @@
-const db = require('../database');
+const db = require('../models');
 
 
 exports.addOrderController = async (req) => {
